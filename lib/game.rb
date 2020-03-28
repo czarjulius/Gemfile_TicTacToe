@@ -5,12 +5,12 @@ require_relative './tic_tac_toe_game/move'
 module TicTacToeGame
     class Game
         attr_reader :board
-        def initialize(board = nil, turn = "x")
+        def initialize(board = nil, turn = "x", toggle = Toggle.new("x"))
             @dim = 3
             @size = @dim * @dim
             @board = board || Array.new(@size, "-")
             @play = Play.new(@board)
-            @toggle = Toggle.new(turn)
+            @toggle = toggle
             @move = Move.new(@board, @turn)
         end
 
