@@ -1,6 +1,8 @@
 require_relative './tic_tac_toe_game/play'
 require_relative './tic_tac_toe_game/toggle'
 require_relative './tic_tac_toe_game/move'
+require_relative './tic_tac_toe_game/human_human_toggle'
+require_relative './tic_tac_toe_game/human_computer_toggle'
 
 module TicTacToeGame
     class Game

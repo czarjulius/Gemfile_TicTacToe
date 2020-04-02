@@ -6,11 +6,8 @@ Gem::Specification.new do |s|
     s.description = "A tictactoe game for console"
     s.authors     = ["Julius Ngwu"]
     s.email       = 'juliusczar.jc@gmail.com'
-    s.files        = ["lib/game.rb", 
-      "lib/tic_tac_toe_game/play.rb",
-      "lib/tic_tac_toe_game/move.rb",
-      "lib/tic_tac_toe_game/toggle.rb",
-      "lib/tic_tac_toe_game/language_settings.json"
-    ]
+    s.files         = Dir.chdir(File.expand_path('..', __FILE__)) do
+      `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+    end
     s.license       = 'MIT'
   end
